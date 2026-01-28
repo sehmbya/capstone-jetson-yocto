@@ -49,5 +49,11 @@
            remote="oe4t"
            revision="dunfell-l4t-r32.7.x" />
 
+  <!-- Custom project layer 'meta-capstone' for embedded dev -->
+  <project name="meta-capstone"
+           path="meta-capstone"
+           remote="github.com/yourusername"
+           revision="main" />	
+
 </manifest>
 
