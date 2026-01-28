@@ -56,7 +56,7 @@
   <!-- Custom project layer 'meta-capstone' for embedded dev -->
   <project name="meta-capstone"
            path="meta-capstone"
-           remote="github.com/sehmbya"
+           remote="capstone"
            revision="main" />	
 
 </manifest>
