@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<!--
+  default.xml custom manifest for NVIDIA Jetson Nano Capstone project "CoinKey"
+
+    Defines the layers and branches to fetch via 'repo' for building
+    a minimal, lightweight Yocto Project image focused on embedded
+	development (Python3, custom drivers for peripherals, UI/UX).
+
+  Author: Abhay Sehmby
+  Created: 2026-01-27
+-->
+
+  <!-- Default settings: Dunfell branch, 4 parallel threads for download -->
+  <default
+    revision="dunfell"
+    sync-j="4" />
+
+  <!-- Remote definitions: "oe4t" for NVIDIA/tegra layers -->
+  <remote name="yocto"
+          fetch="https://git.yoctoproject.org/git/" />
+  <remote name="oe4t"
+          fetch="https://github.com/OE4T/" />
+  <remote name="openembedded"
+          fetch="https://github.com/openembedded/" />
+
+  <!-- Yocto Core -->
+  <project name="poky"
+           path="poky"
+           remote="yocto"
+           revision="dunfell" />
+
+  <!-- OpenEmbedded layers -->
+  <project name="meta-openembedded"
+           path="meta-openembedded"
+           remote="openembedded"
+           revision="dunfell" />
+
+  <!-- Python support -->
+  <project name="meta-python"
+           path="meta-openembedded/meta-python"
+           remote="openembedded"
+           revision="dunfell" />
+
+  <!-- NVIDIA BSP for Jetson Nano: Kernel, Drivers, Jetpack SDK -->
+  <project name="meta-tegra"
+           path="meta-tegra"
+           remote="oe4t"
+           revision="dunfell-l4t-r32.7.x" />
+
+  <!-- Custom project layer 'meta-capstone' for embedded dev -->
+  <project name="meta-capstone"
+           path="meta-capstone"
+           remote="github.com/yourusername"
+           revision="main" />	
+
+</manifest>
+
