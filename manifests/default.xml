@@ -49,10 +49,14 @@
            remote="oe4t"
            revision="dunfell-l4t-r32.7.x" />
 
+  <!-- Custom remote for custom layer -->
+  <remote name="capstone"
+	  fetch="https://github.com/sehmbya/capstone-jetson-yocto.git" />
+
   <!-- Custom project layer 'meta-capstone' for embedded dev -->
   <project name="meta-capstone"
            path="meta-capstone"
-           remote="github.com/yourusername"
+           remote="github.com/sehmbya"
            revision="main" />	
 
 </manifest>
