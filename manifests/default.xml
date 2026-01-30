@@ -10,12 +10,10 @@
 
   Author: Abhay Sehmby
   Created: 2026-01-27
--->
+-->	
 
   <!-- Default settings: Dunfell branch, 4 parallel threads for download -->
-  <default
-    revision="dunfell"
-    sync-j="4" />
+  <default revision="dunfell" sync-j="4" />
 
   <!-- Remote definitions: "oe4t" for NVIDIA/tegra layers -->
   <remote name="yocto"
@@ -24,40 +22,28 @@
           fetch="https://github.com/OE4T/" />
   <remote name="openembedded"
           fetch="https://github.com/openembedded/" />
+  <remote name="capstone"
+	  fetch="https://github.com/sehmbya/" />
 
-  <!-- Yocto Core -->
+  <!-- Yocto core -->
   <project name="poky"
            path="poky"
-           remote="yocto"
-           revision="dunfell" />
+           remote="yocto" />
 
-  <!-- OpenEmbedded layers -->
+  <!-- OpenEmbedded -->
   <project name="meta-openembedded"
            path="meta-openembedded"
-           remote="openembedded"
-           revision="dunfell" />
-
-  <!-- Python support -->
-  <project name="meta-python"
-           path="meta-openembedded/meta-python"
-           remote="openembedded"
-           revision="dunfell" />
+           remote="openembedded" />
 
   <!-- NVIDIA BSP for Jetson Nano: Kernel, Drivers, Jetpack SDK -->
   <project name="meta-tegra"
            path="meta-tegra"
            remote="oe4t"
-           revision="dunfell-l4t-r32.7.x" />
-
-  <!-- Custom remote for custom layer -->
-  <remote name="capstone"
-	  fetch="https://github.com/sehmbya/capstone-jetson-yocto.git" />
+           revision="dunfell" />
 
   <!-- Custom project layer 'meta-capstone' for embedded dev -->
   <project name="meta-capstone"
            path="meta-capstone"
            remote="capstone"
-           revision="main" />	
-
+           revision="main" />
 </manifest>
-
