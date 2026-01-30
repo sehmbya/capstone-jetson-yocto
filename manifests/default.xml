@@ -35,10 +35,6 @@
            path="meta-openembedded"
            remote="openembedded" />
 
-  <project name="meta-python"
-           path="meta-openembedded/meta-python"
-           remote="openembedded" />
-
   <!-- NVIDIA BSP for Jetson Nano: Kernel, Drivers, Jetpack SDK -->
   <project name="meta-tegra"
            path="meta-tegra"
