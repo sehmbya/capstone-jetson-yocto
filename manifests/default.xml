@@ -23,7 +23,7 @@
   <remote name="openembedded"
           fetch="https://github.com/openembedded/" />
   <remote name="capstone"
-	  fetch="https://github.com/sehmbya/meta-capstone.git" />
+	  fetch="https://github.com/sehmbya/" />
 
   <!-- Yocto core -->
   <project name="poky"
